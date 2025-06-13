@@ -1,0 +1,264 @@
+<?php
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/SMTP.php';
+
+// Database connection
+$host = 'localhost';
+$db = 'time_capsule';
+$user = 'root';
+$pass = '';
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+function sendMessages($conn) {
+    // Query messages whose send_datetime has passed
+    $sql = "SELECT * FROM time_capsules WHERE send_datetime <= NOW()";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            // Send the email via PHPMailer
+            $email = $row['email'];
+            $subject = "Your Message from the Past";
+            $message = $row['message'];
+
+            // Create PHPMailer instance
+            $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+
+            try {
+                // Server settings
+                $mail->isSMTP();
+                $mail->Host       = 'smtp.gmail.com';  // Use your SMTP host
+                $mail->SMTPAuth   = true;
+                $mail->Username   = 'relapsethefuture@gmail.com';  // SMTP username
+                $mail->Password   = 'qrztvndecsawnmqn';  // SMTP password (use App Password for Gmail)
+                $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port       = 587;  // SMTP port
+
+                // Recipients
+                $mail->setFrom('relapsethefuture@gmail.com', 'Time Capsule');
+                $mail->addAddress($email);
+
+                // Content
+                $mail->isHTML(true);
+                $mail->Subject = $subject;
+                $mail->Body    = nl2br($message);
+
+                // Send the message
+                if ($mail->send()) {
+                    $delete_sql = "DELETE FROM time_capsules WHERE id = ?";
+                    $stmt = $conn->prepare($delete_sql);
+                    $stmt->bind_param("i", $row['id']);
+                    $stmt->execute();
+                    $stmt->close();
+                } else {
+                }
+            } catch (Exception $e) {
+            }
+        }
+    }
+}
+
+// Call the sendMessages function to check and send messages
+sendMessages($conn);
+
+// Close the connection
+$conn->close();
+?>
+
+<!--WEBSITE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReLapse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Jomhuria&family=Peddana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <a href ="index.php"><img src = "images/relapse.png"></a></div>
+    </header>
+        <div id="create">
+        <section class="main-form">
+            <h1>YOUR PERSONAL DIGITAL TIME CAPSULE</h1>
+            <form method="POST" id="messageForm" enctype="multipart/form-data">
+                <div class = "form">
+                <label for="message">Message to your Future Self:</label><br>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                <div class = "container">
+                <div class = "info">
+                <label for="attachment">Attach File:</label><br>
+                <input type="file" id="attachment" name="attachment"><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                <label for="verify">Verification Code:</label><br>
+                <input type="text" id="verify" name="verify" placeholder="Enter verification code" required><br>
+                <div class="verify_code">
+                <button type="button" id="sendCodeButton">Send Verification Code</button><br>
+                </div>
+                <label for="future-date">Future Date to Send Message:</label><br>
+                <input type="datetime-local" id="future-datetime" name="future-datetime" required><br>
+                </div>
+                <div class = "terms">
+                    <h1>By sending, you acknowledge the following:</h1>
+                    <p>Sensitive Information:<br>Please do not use this service to send or store sensitive information, such as passwords, login credentials, or personal identification details. <br><br>
+                    Verification and Notifications:<br>We may email you to verify your email address or to provide updates and notifications related to this service.<br><br>
+                    Support Limitations:<br>This is an automated service. We do not provide customer service or technical support for its use. <br><br>
+                    Privacy and Data Use:<br>Your email content is confidential and will not be shared with third parties. However, anonymized data may be used internally for insights and improvements.</p>
+                </div>
+                </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms" required>I understand and agree to the terms. I understand there is NO technical help for this service.
+                    </label>
+                </div>
+                <div class="button">
+                <button type="submit">Send to the Future</button>                     
+                </div>
+            </form>
+        </section>        
+        </div>
+        <div class="tagline">        
+        <h1>A Letter to Tomorrow's You.</h1>
+        </div>
+        <section class="guide">
+            <div id="guide">
+            <h1>How <b>ReLapse</b> works<hr></h1>
+            <div class="container2">
+            <div class="write">
+            <img src="images/pencil.png" alt="pencil">
+            <h1>Write your Message</h1>
+            <p>Compose a message for your future self, a loved one, or a group. 
+                It can be long or short—share thoughts, dreams, hopes, or advice. 
+                Take your time to write something meaningful.</p>
+            </div>
+            <div class="date">
+            <img src="images/calendar.png" alt="calendar">
+            <h1>Choose Future Date</h1>
+            <p>Select a date in the future for your message to be delivered. 
+                This could be a milestone like a birthday, an anniversary, or 
+                any day that holds special meaning for you.</p>
+            </div>
+            <div class="verify">
+            <img src="images/email.png" alt="email">
+            <h1>Confirm Your Email</h1>
+            <p>To ensure your message reaches the correct destination, 
+                we’ll show you a verification code. You can enter the code to 
+                confirm. Without verification, your message won’t be sent.</p>
+            </div>
+            <div class="time">
+            <img src="images/clock.png" alt="clock">
+            <h1>Enjoy the journey.</h1>
+            <p>Live your life, and let your time capsule work its magic. It will travel 
+                through time and reach you on your chosen date—perhaps as a delightful surprise.</p>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="greatness">
+            <div id="greatness">
+            <h1>This is Great for:</h1>
+            <ul>
+            <li>Marking the start or end of life chapters, like moving, graduating, or changing careers.</li>
+            <li>Capturing memories during major life events, celebrations, or achievements.</li>
+            <li>For families, friends, or communities to create a shared keepsake for future generations.</li>
+            <li>Preserving personal reflections and goals to revisit later.</li>
+            <li>Milestone moments you want to cherish, like anniversaries or reunions.</li>
+            <li>Creating a physical connection to your past self or group for a future reveal.</li>
+            </ul>
+            </div>
+        </section>
+        <section class="inspiration">
+            <div id="inspiration">
+            <div class="container3">
+            <div class="looking">
+            <h1>Looking for Inspiration?</h1>
+            <p>Here are some prompts to spark your reflections:</p>
+            </div>
+            <div class="questions">
+            <ul>
+            <li>What are your proudest achievements so far, and how did they shape you?</li>
+            <li>Who are the people who matter most to you right now, and why?</li>
+            <li>What challenges have you overcome, and what did you learn from them?</li>
+            <li>What are your biggest fears or uncertainties, and how are you working through them?</li>
+            <li>What’s something about today’s world you hope will improve in the future?</li>
+            <li>What makes you feel truly happy or alive right now?</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+        </section>
+    <footer>
+    <div class="footer-title">
+    <a href ="index.php"><img src="images/relapse.png"></a>
+    <h1>Relive the Past, Unlock the Future</h1>
+    </div>
+    <div class="footer-nav">
+      <span><a href="#create">Create Message</a></span>
+      <span><a href="#guide">Guidelines</a></span>
+      <span><a href="#greatness">Greatness</a></span>
+      <span><a href="#inspiration">Inspirations</a></span>
+      <h3>Follow Us</h3>
+      <div class="socials">
+      <a href="mailto:relapsethefuture.com"><img src="images/email_us.png" alt="Email"></a>
+      <a href="https://www.facebook.com/profile.php?id=61570040590424"><img src="images/facebook.png" alt="Facebook"></a>      
+      <p>&copy; 2024 ReLapse.com. All rights reserved.</p>
+      <p>Calma, Samantha | Cruz, John Joseph | De Guzman, Mykee | Dumalaog, Kyle Roger | Villegas, Andrew James</p>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("sendCodeButton").addEventListener("click", function() {
+        var email = document.getElementById("email").value;
+        if (email) {
+            $.ajax({
+                url: "send_code.php",
+                type: "POST",
+                data: { email: email },
+                success: function(response) {
+                    alert(response); // Show message about code sent
+                }
+            });
+        } else {
+            alert("Please enter your email first.");
+        }
+    });
+
+    document.getElementById("messageForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var formData = new FormData(this);
+
+        // Send the form data via AJAX to submit_message.php
+        $.ajax({
+            url: "submit_message.php",
+            type: "POST",
+            data: formData,
+            processData: false,  // Do not process the data
+            contentType: false,  // Do not set content type
+            success: function(response) {
+                // Handle the response from submit_message.php
+                alert(response); // Show the response (success or error message)
+
+                // Clear the form fields after successful submission
+                document.getElementById("messageForm").reset();
+            },
+            error: function() {
+                alert("Error submitting the form.");
+            }
+        })
+    });
+</script>
+</body>
+</html>

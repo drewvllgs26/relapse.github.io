@@ -1,0 +1,1541 @@
+body {
+    margin: 0;
+    background-color: #415A77;
+}
+
+.header {
+    background-color: #1B263B;
+    height: 250px;
+}
+
+.header a img{
+    margin-top: 30px;
+}
+
+.header b {
+    font-weight: normal;
+    color: #939496;
+    font-size: 80px;
+}
+
+.main-form {
+    width: 1000px;
+    height: 970px;
+    background-color: #E0E1DD;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.main-form h1 {
+    font-family: "Peddana";
+    text-align: center;
+    color: #1B263B;
+    font-size: 48px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.form {
+    margin: 40px;
+    margin-top: 0;
+}
+
+.form label {
+    font-size: 32px;
+    font-family: "Peddana";
+    color: #1B263B;
+}
+
+.form textarea {
+    width: 900px;
+    height: 260px;
+    resize: none; 
+    outline: none;
+    font-size: 15px;
+    font-family: "Albert Sans";
+}
+
+.form input {
+    font-family: "Albert Sans";
+    width: 290px;
+    height: 30px;
+}
+
+.form input[type="datetime-local"] {
+    text-align: center;
+}
+
+.form input:hover, .form textarea:hover, .checkbox input[name="terms"]:hover {
+    border-color: #415A77;
+    background-color: #F0F4F8;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.info {
+    width: 400px;
+}
+
+.terms {
+    width: 500px;
+}
+
+.terms h1 {
+    font-size: 32px;
+    text-align: left;
+}
+
+.terms p {
+    font-family: "Albert Sans";
+    color: #1B263B;
+}
+
+.checkbox {
+    text-align: center;
+    margin-top: 0;
+    font-family: "Albert Sans";
+    font-size: 15px;
+}
+
+input[name="terms"]:checked {
+    accent-color: #1B263B; 
+}
+
+.button {
+    text-align: center;
+    margin: 20px;
+}
+
+.button button {
+    border-radius: 20px;
+    background-color:#1B263B;
+    width: 250px;
+    height: 50px;
+    color: #E0E1DD;
+    font-family: "Albert Sans";
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.verify_code {
+    margin-top: 10px;
+    width: 300px;
+    text-align: end;
+}
+
+.verify_code button {
+    background-color: #1B263B;
+    font-family: "Albert Sans";
+    color: #DAD7CD;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tagline h1 {
+    color: #E0E1DD;
+    font-size: 72px;
+    font-family: "Jomhuria";
+    font-weight: normal;
+    text-align: center;
+}
+
+.guide {
+    background-color: #1B263B;
+}
+
+.guide h1{
+    font-family: "Jomhuria";
+    font-weight: normal;
+    color: #E0E1DD;
+    font-size: 72px;
+    padding: 50px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.guide b {
+    font-weight: normal;
+    color: #939496;
+    font-size: 90px;
+}
+
+hr {
+    margin: 0;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 img {
+    width: 90px;
+    height: 90px;
+    margin: 50px;
+}
+
+.container2 h1{
+    font-family: "Albert Sans";
+    font-size: 48px;
+    margin: 50px;
+    margin-top: 0px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container2 p {
+    font-family: "Albert Sans";
+    font-size: 20px;
+    margin: 50px;
+    margin-top: 0px;
+    padding: 0;
+    color: #E0E1DD;
+}
+
+.greatness {
+    background-color: #E0E1DD;
+    height: 500px;
+}
+
+.greatness h1{
+    font-family: "Jomhuria";
+    font-weight: normal;
+    color: #415A77;
+    text-align: center;
+    font-size: 72px;
+    padding: 50px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none; 
+    padding-left: 20px;     
+    margin: 150px;
+    margin-top: 0;
+}
+li {
+    position: relative;  
+    margin-bottom: 20px; 
+    font-size: 24px;
+    color: #415A77;
+    font-family: "Albert Sans";
+}
+li::before {
+    content: '';
+    width: 8px;          
+    height: 8px;
+    background: #415A77;  
+    position: absolute;
+    left: -25px;         
+    top: 10px;            
+    transform: rotate(45deg);
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.looking {
+    align-self: center;
+    width: 600px;
+    margin: 140px;
+}
+
+.looking h1 {
+    color: #E0E1DD;
+    background-color: #415A77;
+    margin: auto;
+    text-align: center;
+    font-family: "Jomhuria";
+    font-size: 120px;
+    font-weight: normal;
+}
+
+.looking p {
+    font-family: "Albert Sans";
+    margin: 0;
+    color: #E0E1DD;
+    font-size: 24px;
+    text-align: center;
+}
+
+.questions {
+    background-color: #778DA9;
+}
+
+.questions ul {
+    margin: 100px;
+}
+
+.questions li {
+    color: #E0E1DD;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.questions li::before {
+    content: '';
+    width: 8px;     
+    height: 8px;
+    background: #DAD7CD;
+    position: absolute;
+    left: -25px;     
+    top: 10px;          
+    transform: rotate(45deg);
+}
+
+footer {
+  background-color: #1B263B;
+  text-align: center;
+  font-family: "Albert Sans";
+  justify-content: space-between;
+  display: flex;
+  height: 300px;
+}
+
+.footer-title {
+    margin: 40px 0 20px 10px;
+    padding-left: 120px;
+    width: 600px;
+}
+
+.footer-title img {
+    width: 420px;
+    height: 150px;
+}
+
+.footer-title h1 {
+    font-family: "Jomhuria";
+    font-weight: normal;
+    font-size: 42px;
+    margin-left: 10px;
+    color: #DAD7CD;
+}
+
+.footer-nav {
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.footer-nav img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-nav span {
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer-nav a:hover {
+    color: #415A77;
+}
+
+.footer-nav a {
+    color: #DAD7CD;
+    text-decoration: none;
+}
+
+.footer-nav p {
+    color: #DAD7CD;
+    font-size: 18px;
+}
+
+.footer-nav h3 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 20px;
+    color: #DAD7CD;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a:first-child {
+    margin-right: 20px;
+}
+
+/* MOBILE-S */
+@media screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    .header {
+        height: 100px;
+    }
+
+    .header a img{
+        margin-top: 10px;
+        width: 220px;
+        height: 75px;
+    }
+    
+    .header h1 {
+        padding: 25px;
+        font-size: 28px;
+    }
+    
+    .main-form {
+        width: 280px;
+        height: 800px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    
+    .main-form h1 {
+        padding: 10px;
+        font-size: 28px;
+    }
+    
+    .form {
+        margin: 20px;
+        margin-top: 0px;
+    }
+    
+    .form label {
+        font-size: 20px;
+    }
+    
+    .form textarea {
+        width: 230px;
+        height: 250px;
+    }
+    
+    .form input {
+        width: 230px;
+        height: 30px;
+    }
+    
+    .container {
+        width: 280px;
+    }
+    
+    .info {
+        width: 450px;
+    }
+    
+    .terms {
+        display: none;
+    }
+    
+    .checkbox {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .checkbox input[name="terms"] {
+        margin-right: 5px;
+    }
+
+    .button {
+        height: 50px;
+        margin: auto;
+    }
+
+    .verify_code {
+        margin-top: 10px;
+        width: 235px;
+        text-align: end;
+    }
+
+    .verify_code button {
+        font-size: 10px;
+    }
+
+    .tagline h1 {
+        color: #E0E1DD;
+        font-size: 70px;
+        font-family: "Jomhuria";
+        text-align: center;
+    }
+
+    .guide h1 {
+        font-size: 70px;
+    }
+    
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2 img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .container2 h1 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    .container2 p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .greatness {
+        height: 550px;
+    }
+
+    .greatness h1 {
+        padding: 30px;
+        font-size: 70px;
+        padding-bottom: 0px;
+    }
+
+    ul {
+        width:fit-content;
+        margin: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .looking {
+        align-self: center;
+        width:fit-content;
+        margin: 20px;
+    }
+    
+    .looking h1 {
+        color: #E0E1DD;
+        background-color: #415A77;
+        margin: auto;
+        text-align: center;
+        font-family: "Jomhuria";
+        font-size: 70px;
+        font-weight: normal;
+    }
+    
+    .looking p {
+        font-family: "Albert Sans";
+        margin: 0;
+        color: #E0E1DD;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .questions {
+        background-color: #778DA9;
+    }
+    
+    .questions ul {
+        margin: 30px;
+    }
+    
+    .questions li {
+        color: #E0E1DD;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    footer {
+        background-color: #1B263B;
+        text-align: center;
+        font-family: "Albert Sans";
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+    }
+      
+    .footer-title {
+        margin: 0;
+        padding-left: 0px;
+        width: 320px;
+    }
+      
+    .footer-title img {
+        margin-top: 20px;
+        width: 200px;
+        height: 70px;
+    }
+      
+    .footer-title h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+      
+    .footer-nav {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+      
+    .footer-nav img {
+        width: 40px;
+        height: 40px;
+    }
+      
+    .footer-nav span {
+        display: none;
+    }
+         
+      
+    .footer-nav p {
+        font-size: 14px;
+    }
+      
+    .footer-nav h3 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 10px;
+        color: #DAD7CD;
+    }
+      
+    .socials {
+        margin-top: 20px;
+    }
+      
+    .socials a:first-child {
+        margin-right: 20px;
+    }
+}
+
+/* MOBILE-M */
+@media screen and (min-device-width: 375px) and (max-device-width: 424px) {
+    .header {
+        height: 110px;
+    }
+    
+    .header a img{
+        margin-top: 15px;
+        width: 220px;
+        height: 75px;
+    }
+
+    .header h1 {
+        padding: 30px;
+        font-size: 28px;
+    }
+    
+    .main-form {
+        width: 325px;
+        height: 820px;
+        margin-left: 25px;
+        margin-top: 40px;
+    }
+    
+    .main-form h1 {
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+    .form {
+        margin: 20px;
+        margin-top: 0px;
+    }
+    
+    .form label {
+        font-size: 20px;
+    }
+    
+    .form textarea {
+        width: 280px;
+        height: 250px;
+    }
+    
+    .form input {
+        width: 280px;
+        height: 30px;
+    }
+    
+    .container {
+        width: 310px;
+    }
+    
+    .info {
+        width: 450px;
+    }
+    
+    .terms {
+        display: none;
+    }
+    
+    .checkbox {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .checkbox input[name="terms"] {
+        margin-right: 5px;
+    }
+
+    .button {
+        height: 50px;
+        margin: auto;
+    }
+    
+    .verify_code {
+        margin-top: 10px;
+        width: 290px;
+        text-align: end;
+    }
+
+    .verify_code button {
+        font-size: 12px;
+    }
+
+    .tagline h1 {
+        color: #E0E1DD;
+        font-size: 70px;
+        font-family: "Jomhuria";
+        text-align: center;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2 img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .container2 h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .container2 p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .greatness {
+        height: 440px;
+    }
+
+    .greatness h1 {
+        padding: 30px;
+        font-size: 70px;
+        padding-bottom: 0px;
+    }
+
+    ul {
+        width:fit-content;
+        margin: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .looking {
+        align-self: center;
+        width:fit-content;
+        margin: 20px;
+    }
+    
+    .looking h1 {
+        color: #E0E1DD;
+        background-color: #415A77;
+        margin: auto;
+        text-align: center;
+        font-family: "Jomhuria";
+        font-size: 70px;
+        font-weight: normal;
+    }
+    
+    .looking p {
+        font-family: "Albert Sans";
+        margin: 0;
+        color: #E0E1DD;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .questions {
+        background-color: #778DA9;
+    }
+    
+    .questions ul {
+        margin: 30px;
+    }
+    
+    .questions li {
+        color: #E0E1DD;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    footer {
+        background-color: #1B263B;
+        text-align: center;
+        font-family: "Albert Sans";
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+    }
+      
+    .footer-title {
+        margin: 0;
+        padding-left: 0px;
+        width: 375px;
+    }
+      
+    .footer-title img {
+        margin-top: 20px;
+        width: 200px;
+        height: 70px;
+    }
+      
+    .footer-title h1 {
+        font-size: 36px;
+        margin: 0;
+        margin-top: 10px;
+    }
+      
+    .footer-nav {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+      
+    .footer-nav img {
+        width: 40px;
+        height: 40px;
+    }
+      
+    .footer-nav span {
+        display: none;
+    }
+         
+      
+    .footer-nav p {
+        font-size: 14px;
+    }
+      
+    .footer-nav h3 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 10px;
+        color: #DAD7CD;
+    }
+
+}
+
+/* MOBILE-L */
+@media screen and (min-device-width: 425px) and (max-device-width: 767px) {
+    .header {
+        height: 130px;
+    }
+
+    .header a img{
+        margin-top: 20px;
+        width: 240px;
+        height: 80px;
+    }
+
+    .header h1 {
+        padding: 30px;
+        font-size: 34px;
+    }
+    
+    .main-form {
+        width: 380px;
+        height: 880px;
+        margin-left: 25px;
+        margin-top: 40px;
+    }
+    
+    .main-form h1 {
+        padding: 10px;
+        font-size: 38px;
+    }
+    
+    .form {
+        margin: 20px;
+        margin-top: 0px;
+    }
+    
+    .form label {
+        font-size: 28px;
+    }
+    
+    .form textarea {
+        width: 330px;
+        height: 250px;
+    }
+    
+    .form input {
+        width: 330px;
+        height: 30px;
+    }
+    
+    .container {
+        width: 310px;
+    }
+    
+    .info {
+        width: 450px;
+    }
+    
+    .terms {
+        display: none;
+    }
+    
+    .checkbox {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .checkbox input[name="terms"] {
+        margin-right: 5px;
+    }
+
+    .button {
+        height: 50px;
+        margin: auto;
+    }
+
+    .verify_code {
+        margin-top: 10px;
+        width: 335px;
+        text-align: end;
+    }
+    
+    .verify_code button {
+        font-size: 14px;
+    }
+    
+    .tagline h1 {
+        color: #E0E1DD;
+        font-size: 70px;
+        font-family: "Jomhuria";
+        text-align: center;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .container2 h1 {
+        font-size: 44px;
+        margin-bottom: 30px;
+    }
+
+    .container2 p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .greatness {
+        height: 570px;
+    }
+
+    .greatness h1 {
+        padding: 30px;
+        font-size: 72px;
+        padding-bottom: 0px;
+    }
+
+    ul {
+        width:fit-content;
+        margin: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        font-size: 18px;
+    }
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .looking {
+        align-self: center;
+        width:fit-content;
+        margin: 20px;
+    }
+    
+    .looking h1 {
+        color: #E0E1DD;
+        background-color: #415A77;
+        margin: auto;
+        text-align: center;
+        font-family: "Jomhuria";
+        font-size: 72px;
+        font-weight: normal;
+    }
+    
+    .looking p {
+        font-family: "Albert Sans";
+        margin: 0;
+        color: #E0E1DD;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .questions {
+        background-color: #778DA9;
+    }
+    
+    .questions ul {
+        margin: 30px;
+    }
+    
+    .questions li {
+        color: #E0E1DD;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    footer {
+        background-color: #1B263B;
+        text-align: center;
+        font-family: "Albert Sans";
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+    }
+      
+    .footer-title {
+        margin: 0;
+        padding-left: 0px;
+        width: 425px;
+    }
+      
+    .footer-title img {
+        margin-top: 20px;
+        width: 200px;
+        height: 70px;
+    }
+      
+    .footer-title h1 {
+        font-size: 42px;
+        margin: 0;
+        margin-top: 10px;
+    }
+      
+    .footer-nav {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+      
+    .footer-nav img {
+        width: 40px;
+        height: 40px;
+    }
+      
+    .footer-nav span {
+        display: none;
+    }
+         
+      
+    .footer-nav p {
+        font-size: 16px;
+    }
+      
+    .footer-nav h3 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 10px;
+        color: #DAD7CD;
+    }
+
+}
+
+/* TABLET */
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .header {
+        height: 140px;
+    }
+
+    .header a img{
+        margin-top: 20px;
+        width: 265px;
+        height: 100px;
+    }
+
+    .header h1 {
+        padding: 30px;
+        font-size: 34px;
+    }
+    
+    .main-form {
+        width: 700px;
+        height: 850px;
+        margin-left: 35px;
+        margin-top: 40px;
+    }
+    
+    .main-form h1 {
+        padding: 10px;
+        font-size: 44px;
+    }
+    
+    .form {
+        margin: 20px;
+        margin-top: 0px;
+    }
+    
+    .form label {
+        font-size: 34px;
+    }
+    
+    .form textarea {
+        width: 650px;
+        height: 250px;
+    }
+    
+    .form input {
+        width: 650px;
+        height: 30px;
+    }
+    
+    .container {
+        width: 310px;
+    }
+    
+    .info {
+        width: 450px;
+    }
+    
+    .terms {
+        display: none;
+    }
+    
+    .checkbox {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .checkbox input[name="terms"] {
+        margin-right: 5px;
+    }
+
+    .button {
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .verify_code {
+        margin-top: 10px;
+        width: 655px;
+        text-align: end;
+    }
+    
+    .verify_code button {
+        font-size: 14px;
+    }
+    
+    .tagline h1 {
+        color: #E0E1DD;
+        font-size: 80px;
+        font-family: "Jomhuria";
+        text-align: center;
+    }
+
+    .guide h1 {
+        font-size: 80px;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2 img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .container2 h1 {
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    .container2 p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .greatness {
+        height: 570px;
+    }
+
+    .greatness h1 {
+        padding: 30px;
+        font-size: 80px;
+        padding-bottom: 0px;
+    }
+
+    ul {
+        width:fit-content;
+        margin: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        font-size: 22px;
+    }
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .looking {
+        align-self: center;
+        width:fit-content;
+        margin: 20px;
+    }
+    
+    .looking h1 {
+        color: #E0E1DD;
+        background-color: #415A77;
+        margin: auto;
+        text-align: center;
+        font-family: "Jomhuria";
+        font-size: 80px;
+        font-weight: normal;
+    }
+    
+    .looking p {
+        font-family: "Albert Sans";
+        margin: 0;
+        color: #E0E1DD;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .questions {
+        background-color: #778DA9;
+    }
+    
+    .questions ul {
+        margin: 30px;
+    }
+    
+    .questions li {
+        color: #E0E1DD;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    footer {
+        background-color: #1B263B;
+        text-align: center;
+        font-family: "Albert Sans";
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+    }
+      
+    .footer-title {
+        margin: 0;
+        padding-left: 0px;
+        width: 768px;
+    }
+      
+    .footer-title img {
+        margin-top: 20px;
+        width: 240px;
+        height: 105px;
+    }
+      
+    .footer-title h1 {
+        font-size: 50px;
+        margin: 0;
+        margin-top: 10px;
+    }
+      
+    .footer-nav {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+      
+    .footer-nav img {
+        width: 50px;
+        height: 50px;
+    }
+      
+    .footer-nav span {
+        display: none;
+    }
+         
+      
+    .footer-nav p {
+        font-size: 22px;
+    }
+      
+    .footer-nav h3 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 10px;
+        color: #DAD7CD;
+    }
+
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1439px) {
+    .header {
+        height: 140px;
+    }
+
+    .header a img{
+        margin-top: 20px;
+        width: 265px;
+        height: 100px;
+    }
+
+    .header h1 {
+        padding: 30px;
+        font-size: 34px;
+    }
+    
+    .main-form {
+        width: 950px;
+        height: 900px;
+        margin-left: 35px;
+        margin-top: 40px;
+    }
+    
+    .main-form h1 {
+        padding: 0px;
+        font-size: 58px;
+        font-weight: 500;
+    }
+    
+    .form {
+        margin: 20px;
+        margin-top: 0px;
+    }
+    
+    .form label {
+        font-size: 28px;
+    }
+    
+    .form textarea {
+        width: 900px;
+        height: 250px;
+    }
+    
+    .form input {
+        width: 300px;
+        height: 30px;
+    }
+    
+    .container {
+        width: 850px;
+    }
+    
+    .info {
+        width: 450px;
+    }
+    
+    .terms h1 {
+        font-size: 28px;
+    }
+
+    .terms p {
+        font-family: "Albert Sans";
+        color: #1B263B;
+        font-size: 14px;
+    }
+    
+    .checkbox {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .checkbox input[name="terms"] {
+        margin-right: 5px;
+    }
+
+    .button {
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    .verify_code {
+        margin-top: 10px;
+        width: 305px;
+        text-align: end;
+    }
+    
+    .verify_code button {
+        font-size: 14px;
+    }
+
+    .tagline h1 {
+        color: #E0E1DD;
+        font-size: 80px;
+        font-family: "Jomhuria";
+        text-align: center;
+    }
+
+    .guide h1 {
+        font-size: 80px;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2 img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .container2 h1 {
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    .container2 p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .greatness {
+        height: 450px;
+    }
+
+    .greatness h1 {
+        padding: 30px;
+        font-size: 80px;
+        padding-bottom: 0px;
+    }
+
+    ul {
+        width:fit-content;
+        margin: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        font-size: 22px;
+    }
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .looking {
+        align-self: center;
+        width:fit-content;
+        margin: 20px;
+    }
+    
+    .looking h1 {
+        color: #E0E1DD;
+        background-color: #415A77;
+        margin: auto;
+        text-align: center;
+        font-family: "Jomhuria";
+        font-size: 80px;
+        font-weight: normal;
+    }
+    
+    .looking p {
+        font-family: "Albert Sans";
+        margin: 0;
+        color: #E0E1DD;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .questions {
+        background-color: #778DA9;
+    }
+    
+    .questions ul {
+        margin: 30px;
+    }
+    
+    .questions li {
+        color: #E0E1DD;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    footer {
+        background-color: #1B263B;
+        text-align: center;
+        font-family: "Albert Sans";
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+    }
+      
+    .footer-title {
+        margin: 0;
+        padding-left: 0px;
+        width: 1024px;
+    }
+      
+    .footer-title img {
+        margin-top: 20px;
+        width: 220px;
+        height: 75px;
+    }
+      
+    .footer-title h1 {
+        font-size: 40px;
+        margin: 0;
+        margin-top: 10px;
+    }
+      
+    .footer-nav {
+        margin-top: 0px;
+        padding-right: 0px;
+    }
+      
+    .footer-nav img {
+        width: 50px;
+        height: 50px;
+    }
+      
+    .footer-nav span {
+        display: none;
+    }
+         
+      
+    .footer-nav p {
+        font-size: 18px;
+    }
+      
+    .footer-nav h3 {
+        font-size: 24px;
+        margin: 0;
+        margin-top: 10px;
+        color: #DAD7CD;
+    }
+
+}
